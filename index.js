@@ -126,12 +126,12 @@ try {
 
 
     bot.start();
+
+    const server = http.createServer((req, res) => {
+        res.writeHead(200);
+        res.end('uwu');
+    });
+    server.listen(3000);
 } catch (error) {
-
+    console.log("A")
 }
-
-const server = http.createServer((req, res) => {
-    res.writeHead(200);
-    res.end('uwu');
-});
-server.listen(3000);
